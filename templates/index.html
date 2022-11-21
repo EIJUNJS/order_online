@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>天天生鲜-首页</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
+</head>
+<body>
+<div class="header_con">
+    <div class="header">
+        <div class="welcome fl">Welcome to superstore!</div>
+        <div class="fr">
+            <div class="login_info fl">
+                Welcome：<em>X X</em>
+            </div>
+            <div class="login_btn fl">
+                <a href="login.html">Sign in</a>
+                <span>|</span>
+                <a href="register.html">Register</a>
+            </div>
+            <div class="user_link fl">
+                <span>|</span>
+                <a href="user_center_info.html">User</a>
+                <span>|</span>
+                <a href="cart.html">My cart</a>
+                <span>|</span>
+                <a href="user_center_order.html">My order</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search_bar clearfix">
+    <a href="index.html" class="logo fl"><img src="images/logo.png"></a>
+    <div class="search_con fl">
+        <input type="text" class="input_text fl" name="" placeholder="You search here...">
+        <input type="button" class="input_btn fr" name="" value="Search">
+    </div>
+    <div class="guest_cart fr">
+        <a href="#" class="cart_name fl">My cart</a>
+        <div class="goods_count fl" id="show_count">1</div>
+    </div>
+</div>
+
+<div class="navbar_con">
+    <div class="navbar">
+        <h1 class="fl">Shop by departure</h1>
+        <ul class="navlist fl">
+            <li><a href="">Home</a></li>
+            <li class="interval">|</li>
+            <li><a href="">Order phone</a></li>
+            <li class="interval">|</li>
+            <li><a href="">lottery</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="center_con clearfix">
+    <ul class="subnav fl">
+        <li><a href="#model01" class="fruit">Fruit</a></li>
+        <li><a href="#model02" class="seafood">Seafood</a></li>
+        <li><a href="#model03" class="meet">Port/Beef/Lamb</a></li>
+        <li><a href="#model04" class="egg">Poultry & eggs</a></li>
+        <li><a href="#model05" class="vegetables">Vegetable</a></li>
+        <li><a href="#model06" class="ice">frozen food</a></li>
+    </ul>
+    <div class="slide fl">
+        <ul class="slide_pics">
+            <li><img src="images/slide.jpg" alt="ppt"></li>
+            <li><img src="images/slide02.jpg" alt="ppt"></li>
+            <li><img src="images/slide03.jpg" alt="ppt"></li>
+            <li><img src="images/slide04.jpg" alt="ppt"></li>
+        </ul>
+        <div class="prev"></div>
+        <div class="next"></div>
+        <ul class="points"></ul>
+    </div>
+    <div class="adv fl">
+        <a href="#"><img src="images/adv01.jpg"></a>
+        <a href="#"><img src="images/adv02.jpg"></a>
+    </div>
+</div>
+
+<div class="list_model">
+    <div class="list_title clearfix">
+        <h3 class="fl" id="model01">Fruit</h3>
+        <div class="subtitle fl">
+            <span>|</span>
+            <a href="#">Fresh Mango</a>
+            <a href="#">California Grapes</a>
+            <a href="#">Amazon Avocado</a>
+        </div>
+        <a href="#" class="goods_more fr" id="fruit_more">More ></a>
+    </div>
+
+    <div class="goods_con clearfix">
+        <div class="goods_banner fl"><img src="images/banner01.jpg"></div>
+        <ul class="goods_list fl">
+            <li>
+                <h4><a href="#">strawberry</a></h4>
+                <a href="#"><img src="images/goods/goods003.jpg"></a>
+                <div class="prize">$ 30.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Grape</a></h4>
+                <a href="#"><img src="images/goods/goods002.jpg"></a>
+                <div class="prize">$ 5.50</div>
+            </li>
+            <li>
+                <h4><a href="#">Lemon</a></h4>
+                <a href="#"><img src="images/goods/goods001.jpg"></a>
+                <div class="prize">$ 3.90</div>
+            </li>
+            <li>
+                <h4><a href="#">kiwi fruit</a></h4>
+                <a href="#"><img src="images/goods/goods012.jpg"></a>
+                <div class="prize">$ 25.80</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="list_model">
+    <div class="list_title clearfix">
+        <h3 class="fl" id="model02">Seafood</h3>
+        <div class="subtitle fl">
+            <span>|</span>
+            <a href="#">Shrimp</a>
+            <a href="#">Scallops</a>
+        </div>
+        <a href="#" class="goods_more fr">More ></a>
+    </div>
+
+    <div class="goods_con clearfix">
+        <div class="goods_banner fl"><img src="images/banner02.jpg"></div>
+        <ul class="goods_list fl">
+            <li>
+                <h4><a href="#">wild sea prawns</a></h4>
+                <a href="#"><img src="images/goods/goods018.jpg"></a>
+                <div class="prize">$ 48.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Scallops</a></h4>
+                <a href="#"><img src="images/goods/goods019.jpg"></a>
+                <div class="prize">$ 46.00</div>
+            </li>
+            <li>
+                <h4><a href="#">frozen saury</a></h4>
+                <a href="#"><img src="images/goods/goods020.jpg"></a>
+                <div class="prize">$ 19.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Shrimp</a></h4>
+                <a href="#"><img src="images/goods/goods021.jpg"></a>
+                <div class="prize">$ 25.00</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="list_model">
+    <div class="list_title clearfix">
+        <h3 class="fl" id="model03">猪牛羊肉</h3>
+        <div class="subtitle fl">
+            <span>|</span>
+            <a href="#">Shrimp</a>
+            <a href="#">Scallops</a>
+        </div>
+        <a href="#" class="goods_more fr">More ></a>
+    </div>
+
+    <div class="goods_con clearfix">
+        <div class="goods_banner fl"><img src="images/banner03.jpg"></div>
+        <ul class="goods_list fl">
+            <li>
+                <h4><a href="#">wild sea prawns</a></h4>
+                <a href="#"><img src="images/goods/goods018.jpg"></a>
+                <div class="prize">$ 48.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Scallops</a></h4>
+                <a href="#"><img src="images/goods/goods019.jpg"></a>
+                <div class="prize">$ 46.00</div>
+            </li>
+            <li>
+                <h4><a href="#">frozen saury</a></h4>
+                <a href="#"><img src="images/goods/goods020.jpg"></a>
+                <div class="prize">$ 19.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Shrimp</a></h4>
+                <a href="#"><img src="images/goods/goods021.jpg"></a>
+                <div class="prize">$ 25.00</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="list_model">
+    <div class="list_title clearfix">
+        <h3 class="fl" id="model04">Poultry & eggs</h3>
+        <div class="subtitle fl">
+            <span>|</span>
+            <a href="#">Shrimp</a>
+            <a href="#">Scallops</a>
+        </div>
+        <a href="#" class="goods_more fr">More ></a>
+    </div>
+
+    <div class="goods_con clearfix">
+        <div class="goods_banner fl"><img src="images/banner04.jpg"></div>
+        <ul class="goods_list fl">
+            <li>
+                <h4><a href="#">wild sea prawns</a></h4>
+                <a href="#"><img src="images/goods/goods018.jpg"></a>
+                <div class="prize">$ 48.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Scallops</a></h4>
+                <a href="#"><img src="images/goods/goods019.jpg"></a>
+                <div class="prize">$ 46.00</div>
+            </li>
+            <li>
+                <h4><a href="#">frozen saury</a></h4>
+                <a href="#"><img src="images/goods/goods020.jpg"></a>
+                <div class="prize">$ 19.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Shrimp</a></h4>
+                <a href="#"><img src="images/goods/goods021.jpg"></a>
+                <div class="prize">$ 25.00</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="list_model">
+    <div class="list_title clearfix">
+        <h3 class="fl" id="model05">Vegetable</h3>
+        <div class="subtitle fl">
+            <span>|</span>
+            <a href="#">Shrimp</a>
+            <a href="#">Scallops</a>
+        </div>
+        <a href="#" class="goods_more fr">More ></a>
+    </div>
+
+    <div class="goods_con clearfix">
+        <div class="goods_banner fl"><img src="images/banner05.jpg"></div>
+        <ul class="goods_list fl">
+            <li>
+                <h4><a href="#">wild sea prawns</a></h4>
+                <a href="#"><img src="images/goods/goods018.jpg"></a>
+                <div class="prize">$ 48.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Scallops</a></h4>
+                <a href="#"><img src="images/goods/goods019.jpg"></a>
+                <div class="prize">$ 46.00</div>
+            </li>
+            <li>
+                <h4><a href="#">frozen saury</a></h4>
+                <a href="#"><img src="images/goods/goods020.jpg"></a>
+                <div class="prize">$ 19.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Shrimp</a></h4>
+                <a href="#"><img src="images/goods/goods021.jpg"></a>
+                <div class="prize">$ 25.00</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="list_model">
+    <div class="list_title clearfix">
+        <h3 class="fl" id="model06">Frozen food </h3>
+        <div class="subtitle fl">
+            <span>|</span>
+            <a href="#">Shrimp</a>
+            <a href="#">Scallops</a>
+        </div>
+        <a href="#" class="goods_more fr">More ></a>
+    </div>
+
+    <div class="goods_con clearfix">
+        <div class="goods_banner fl"><img src="images/banner06.jpg"></div>
+        <ul class="goods_list fl">
+            <li>
+                <h4><a href="#">wild sea prawns</a></h4>
+                <a href="#"><img src="images/goods/goods018.jpg"></a>
+                <div class="prize">$ 48.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Scallops</a></h4>
+                <a href="#"><img src="images/goods/goods019.jpg"></a>
+                <div class="prize">$ 46.00</div>
+            </li>
+            <li>
+                <h4><a href="#">frozen saury</a></h4>
+                <a href="#"><img src="images/goods/goods020.jpg"></a>
+                <div class="prize">$ 19.00</div>
+            </li>
+            <li>
+                <h4><a href="#">Shrimp</a></h4>
+                <a href="#"><img src="images/goods/goods021.jpg"></a>
+                <div class="prize">$ 25.00</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="foot_link">
+        <a href="#">About us</a>
+        <span>|</span>
+        <a href="#">Contact us</a>
+        <span>|</span>
+        <a href="#">Career Opportunities</a>
+        <span>|</span>
+        <a href="#">FAQ's</a>
+    </div>
+    <p>CopyRight © 2016 XXXXXX Company All Rights Reserved</p>
+    <p>Phone：902-XXXXXXX </p>
+</div>
+<script type="text/javascript" src="js/slideshow.js"></script>
+<script type="text/javascript">
+    BCSlideshow('focuspic');
+    var oFruit = document.getElementById('fruit_more');
+    var oShownum = document.getElementById('show_count');
+
+    var hasorder = localStorage.getItem('order_finish');
+
+    if (hasorder) {
+        oShownum.innerHTML = '2';
+    }
+
+    oFruit.onclick = function () {
+        window.location.href = 'list.html';
+    }
+</script>
+</body>
+</html>
