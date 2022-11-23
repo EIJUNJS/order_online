@@ -2,7 +2,7 @@ import re
 from django.views.generic import View
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, authenticate, login
 from itsdangerous import URLSafeTimedSerializer as Serializer
 from itsdangerous import SignatureExpired
 from django.conf import settings
@@ -41,7 +41,7 @@ class register_view(View):
             return render(request, 'register.html', {'errmsg': 'Please allow agreement'})
         # check id if exist
         try:
-            User.objects.get(username=username)
+            user = User.objects.get(username=username)
         except User.DoesNotExist:
             user = None
 
@@ -90,5 +90,32 @@ class ActiveView(View):
 
 
 class loginView(View):
+    '''login in'''
+
     def get(self, request):
         return render(request, 'login.html')
+
+    def post(self, request):
+        '''login check'''
+        # accept data
+        username = request.POST.get('username')
+        password = request.POST.get('pwd')
+
+        # check data
+        if not all([username, password]):
+            return render(request, 'login.html', {'errmsg': 'Lack information'})
+
+        # login check
+        user = authenticate(username=username, password=password)
+        print(user)
+        if user is not None:
+            # username & password correct
+            if user.is_active:
+                # user is active
+                login(request, user)
+                # jump to home
+                return redirect(reverse('goods:index'))
+            else:
+                return render(request, 'login.html', {'errmsg': 'The account is not active'})
+        else:
+            return render(request, 'login.html', {'errmsg': 'Username or password is wrong'})

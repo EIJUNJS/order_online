@@ -143,7 +143,11 @@ TINYMCE_DEFAULT_CONFIG = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'shao19980209@gmail.com'
-EMAIL_HOST_PASSWORD = 'qynmhrwryuouetzi'
+EMAIL_HOST_PASSWORD = 'qdnsmlckysskrepw'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'XXX superstore<shao19980209@gmail.com>'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
+)

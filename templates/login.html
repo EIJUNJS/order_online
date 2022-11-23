@@ -23,13 +23,14 @@
                 <a href="#">register</a>
             </div>
             <div class="form_input">
-                <form>
+                <form method="post">
+                    {% csrf_token %}
                     <input type="text" name="username" class="name_input" placeholder="My username">
                     <div class="user_error">Input error</div>
                     <input type="password" name="pwd" class="pass_input" placeholder="My password">
                     <div class="pwd_error">Input error</div>
                     <div class="more_input clearfix">
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="remember">
                         <label>Stay signed in</label>
                         <a href="#">Forget password</a>
                     </div>
@@ -39,7 +40,7 @@
         </div>
     </div>
 </div>
-
+{{ errmsg }}
 <div class="footer no-mp">
     <div class="foot_link">
         <a href="#">About us</a>
