@@ -93,13 +93,21 @@ class loginView(View):
     '''login in'''
 
     def get(self, request):
-        return render(request, 'login.html')
+
+        if 'username' in request.COOKIES:
+            username = request.COOKIES.get('username')
+            checked = 'checked'
+        else:
+            username = ''
+            checked = ''
+        return render(request, 'login.html', {'username': username, 'checked': checked})
 
     def post(self, request):
         '''login check'''
         # accept data
         username = request.POST.get('username')
         password = request.POST.get('pwd')
+        remember = request.POST.get('remember')
 
         # check data
         if not all([username, password]):
@@ -107,14 +115,22 @@ class loginView(View):
 
         # login check
         user = authenticate(username=username, password=password)
-        print(user)
         if user is not None:
             # username & password correct
             if user.is_active:
                 # user is active
                 login(request, user)
                 # jump to home
-                return redirect(reverse('goods:index'))
+                response = redirect(reverse('goods:index'))
+
+                # judge remember username or not
+                if remember == 'on':
+                    # remember
+                    response.set_cookie('username', username, max_age=7 * 24 * 3600)
+                else:
+                    response.delete_cookie('username')
+                return response
+
             else:
                 return render(request, 'login.html', {'errmsg': 'The account is not active'})
         else:
